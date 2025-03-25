@@ -1,0 +1,98 @@
+.meet-our-teachers {
+  text-align: center;
+  margin-top: var(--section-margin);
+  background-color: var(--white);
+}
+
+.highlight {
+  color: #38761d;
+}
+
+.meet-our-teachers__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  text-align: center;
+
+  span {
+    /* TODO need understand why not working without */
+    z-index: 0;
+  }
+}
+
+.section-description {
+  max-width: 709px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  color: var(--dark-blue);
+}
+
+.teachers-grid {
+  display: grid;
+  gap: 32px;
+  align-items: start;
+}
+
+.teacher-card {
+  background: var(--white);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.teacher-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.teacher-name {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.teacher-description {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--dark-blue);
+}
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+  .meet-our-teachers__title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .teacher-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Cards in two columns */
+  .teachers-grid {
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+  }
+
+  .teacher-card {
+    max-width: 272px;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1280px) {
+  .teachers-grid {
+    max-width: 1024px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

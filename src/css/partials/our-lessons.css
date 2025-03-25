@@ -1,0 +1,118 @@
+.our-lessons {
+  text-align: center;
+  margin-top: var(--section-margin);
+}
+.our-lessons__title {
+  color: var(--black);
+  font-size: 32px;
+  line-height: 1.12;
+  font-weight: 700;
+}
+
+.our-lessons__description {
+  color: var(--dark-blue);
+  font-size: clamp(14px, 4vw, 16px);
+  line-height: 1.71;
+  max-width: 665px;
+  margin: 10px auto 30px;
+}
+
+@media (min-width: 375px) {
+  .our-lessons__description {
+    font-size: 16px;
+  }
+}
+
+.our-lessons__cards {
+  display: grid;
+  gap: 20px;
+  align-items: start;
+  justify-self: center;
+}
+
+.lesson-card {
+  max-width: 336px;
+  background: var(--white);
+  color: var(--black);
+  padding: 32px;
+  border: solid 1px var(--green);
+  border-radius: 16px;
+  text-align: center;
+
+  @media screen and (min-width: 1280px) {
+    max-width: 320px;
+  }
+}
+
+.lesson-card--highlighted {
+  background: var(--green);
+  color: var(--white);
+}
+
+.card-title {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.lesson-price {
+  font-size: 32px;
+  line-height: 1.12;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.lesson-description {
+  color: var(--dark-blue);
+  font-size: 16px;
+  line-height: 1.71;
+  margin-bottom: 32px;
+}
+
+.lesson-card--highlighted .lesson-description {
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .our-lessons__title {
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .our-lessons__description {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .our-lessons__cards {
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+  }
+  .lesson-button {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .lesson-price {
+    line-height: 1.37;
+  }
+
+  .lesson-description {
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1280px) {
+  .our-lessons__description {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .our-lessons__cards {
+    max-width: 1024px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: center;
+  }
+}
